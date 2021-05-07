@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Mi simulador de Coutas</title>
+
+
+</head>
+
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="container-md-fluid mx-8">
+      <div class="col-md-12">
+        <div class="card text-center">
+          <div class="card-header  bg-dark">
+
+            <ul class="nav nav-tabs card-header-tabs">
+              <img class="Logus" src="./img/1580261.png" alt="Logotipos">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Donar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Herramientas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Publicar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Socio</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- bienvenida -->
+  <main class="wrapper">
+    <div class="container text-center">
+      <div>
+        <h1 class="font-weight-bold py-2 text-light">Crédito Seguro!!<br>con o sin DNI.</h1>
+
+        <p class="card-text my-5">Queremos brindarte la mejor solución, por eso contamos con diferentes propuestas
+          para que
+          puedas llevarte en el acto la más conveniente.
+          Podés solicitar tu prestamo de manera online o comunicarte a nuestras sucursales para una atención
+          personalizada.
+        </p>
+        <a id="btn1" class="btn btn-primary btn-lg " role="button">
+          Calcular Cuotas </a>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Form calcular -->
+
+  <p>
+    <div class="container py-5 Mostrar_Div">
+      <div class="row mt-3">
+        <div class="col-12 col-sm-12 col-lg-6">
+          <h2 class="h2 mx-4">Simula tu Préstamo</h2>
+          <div class="form-group mt-2 mb-3 w-75">
+            <label class="p-2" for="monto">Monto a solicitar</label>
+            <input type="text" class="form-control" id="monto" placeholder="Ingresar monto">
+          </div>
+          <div class="form-group mt-2 mb-3 w-75">
+            <label class="p-2" for="tiempo">Tiempo en Meses</label>
+            <input type="number" class="form-control" id="tiempo" placeholder="Ingresar cantidad de meses" min="1"
+              value="1">
+          </div>
+          <div class="form-group mt-2 mb-3 w-75">
+            <label class="p-2" for="interes">Interés Mensual %</label>
+            <input type="text" class="form-control" id="interes" placeholder="Ingresar tasa de interés mensual">
+          </div>
+          <div class="form-group mt-2 mb-3 alert alert-danger" hidden id="alert-error">
+            Completa todos los campos!
+          </div>
+          <button type="button" class="btn btn-primary mb-2 p-2 d-block" id="btnCalcular">Calcular</button>
+          <button type="button" class="btn btn-dark mt-2 p-2 d-block" id="btnLimpiar"> Limpiar </button>
+        </div>
+
+
+        <div class="col-12 col-sm-12 col-lg-6 py-5">
+          <table id="lista-tabla" class="table table-bordered table-hover table-light">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Amortización</th>
+                <th>Interés</th>
+                <th>Cuota</th>
+                <th>Saldo</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </p>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="module" src="./js/main.js"></script>
+  <script src="./js/dayjs.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
+  </script>
+
+
+</body>
+
+</html>
